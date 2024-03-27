@@ -1,6 +1,5 @@
 import os
 
-
 import pandas as pd
 
 import matplotlib.pyplot as plt
@@ -23,7 +22,6 @@ b2 = B2(endpoint=os.environ['B2_ENDPOINT'],
         secret_key=os.environ['B2_applicationkey'])
 
 def get_data():
-    # collect data frame of reviews and their sentiment
     b2.set_bucket(os.environ['B2_BUCKETNAME'])
     df = b2.get_df(REMOTE_DATA)
     return df  
